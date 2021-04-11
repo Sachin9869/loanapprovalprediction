@@ -18,15 +18,15 @@
      <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-	<link href="../templates/content/style.css" rel="stylesheet">
-    <link href="../templates/content/fontawesome-all.css" rel="stylesheet">
-    <link href="../templates/content/swiper.css" rel="stylesheet">
-    <link href="../templates/content/magnific-popup.css" rel="stylesheet">
-	<link href="../templates/content/bootstrap.css" rel="stylesheet">
+	<link href="{{url_for('static', filename='templates/content/style.css')}}" rel="stylesheet">
+	<link href="{{url_for('static', filename='templates/content/fontawesome-all.css')}}" rel="stylesheet">
+	<link href="{{url_for('static', filename='templates/content/swiper.css')}}" rel="stylesheet">
+	<link href="{{url_for('static', filename='templates/content/magnific-popup.css')}}" rel="stylesheet">
+	<link href="{{url_for('static', filename='templates/content/bootstrap.css')}}" rel="stylesheet">
 
 	
 	<!-- Favicon  -->
-    <link rel="icon" href="../templates/images/logo.svg">
+     <link rel="icon" href="{{ url_for('static', filename='templates/images/logo.svg') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -47,7 +47,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="/"><img src="../templates/images/logo.svg"	alt="alternative"></a>
+        <a class="navbar-brand logo-image" href="/"><img src="{{ url_for('static', filename='templates/images/logo.svg') }}" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-         <a class="navbar-brand logo-image" href="/"><img src="../templates/images/logo.svg"	alt="alternative"></a>
+          <link rel="icon" href="{{ url_for('static', filename='templates/images/logo.svg') }}">
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,7 +73,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="../templates/index.html">HOME <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="Main">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#Predict">PREDICT</a>
@@ -294,15 +294,15 @@
     <!-- end of copyright -->
     <!-- Scripts -->   
 	
-	<script src="../templates/content/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-	<script src="../templates/content/popper.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/bootstrap.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/jquery.easing.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/jquery.magnific-popup.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/morphext.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/isotope.pkgd.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../templates/content/validator.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-	<script src="../templates/content/scripts.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='templates/content/jquery.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='templates/content/popper.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/bootstrap.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/jquery.easing.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/jquery.magnific-popup.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/morphext.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/isotope.pkgd.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{{url_for('static', filename='templates/content/validator.min.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+	<script src="{{url_for('static', filename='templates/content/scripts.js')}}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
 
 </body>
 </html>
