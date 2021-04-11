@@ -17,9 +17,11 @@ def home():
 
 @app.route('/result',methods=['POST'])
 
-def predict():
-  if flask.request.method == 'GET':
-    return (flask.render_template('Individual.html'))
+@app.route("/Individual", methods=['GET', 'POST'])
+
+def Individual():
+  if request.method == 'GET':
+    return (render_template('Individual.html'))
 
   loan_id=request.form['LoanId']
   gender=request.form['Gender']
@@ -79,9 +81,9 @@ def predict():
   classifier=model.predict(dataset)
 
   if classifier == 'Y':
-    res = 'Cogratulations! You loan is approved. Kindly connect with support team for papar work'
+    res = 'Congratulations! Your loan is approved. Kindly connect with support team for paper work'
   else:
     res = 'Loan Denied'  
 
-  return flask.render_template('Individual.html',
+  return render_template('Individual.html',
                                result=res)    
