@@ -17,7 +17,7 @@ def home():
 
 @app.route('/Main')
 def Main():
-  return (flask.render_template('index.html'))
+  return (render_template('index.html'))
 
 @app.route('/result',methods=['POST'])
 
