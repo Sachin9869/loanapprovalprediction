@@ -15,6 +15,9 @@ app=Flask(__name__)
 def home():
   return render_template('index.html')
 
+def main():
+  return (render_template('index.html'))
+
 @app.route('/result',methods=['POST'])
 
 @app.route("/Individual", methods=['GET', 'POST'])
