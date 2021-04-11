@@ -16,11 +16,11 @@
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
-	<link href="{{ url_for('templates', filename='content/style.css') }}" rel="stylesheet">
-	<link href="{{ url_for('templates', filename='content/fontawesome-all.css') }}" rel="stylesheet">
-	<link href="{{ url_for('templates', filename='content/swiper.css') }}" rel="stylesheet">
-	<link href="{{ url_for('templates', filename='content/magnific-popup.css') }}" rel="stylesheet">
-	<link href="{{ url_for('templates', filename='content/bootstrap.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='templates/content/style.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='templates/content/fontawesome-all.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='templates/content/swiper.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='templates/content/magnific-popup.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='templates/content/bootstrap.css') }}" rel="stylesheet">
 
 	
 	
@@ -28,7 +28,7 @@
 	
 	<!-- Favicon  -->
     <!--<link rel="icon" href="../templates/images/logo.svg">-->
-	 <link rel="icon" href="{{ url_for('templates', filename='images/logo.svg') }}">
+	 <link rel="icon" href="{{ url_for('static', filename='templates/images/logo.svg') }}">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     
@@ -49,7 +49,7 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
         <!-- Image Logo -->
         <!--<a class="navbar-brand logo-image" href="/"><img src="../templates/images/logo.svg"	alt="alternative"></a>-->
-	    <a class="navbar-brand logo-image" href="/"><img src="{{ url_for('templates', filename='images/logo.svg') }}" alt="alternative"></a>
+	    <a class="navbar-brand logo-image" href="/"><img src="{{ url_for('static', filename='templates/images/logo.svg') }}" alt="alternative"></a>
         
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
