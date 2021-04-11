@@ -15,8 +15,9 @@ app=Flask(__name__)
 def home():
   return render_template('index.html')
 
-def main():
-  return (render_template('index.html'))
+@app.route('/Main')
+def Main():
+  return (flask.render_template('index.html'))
 
 @app.route('/result',methods=['POST'])
 
@@ -73,7 +74,7 @@ def Individual():
   
   dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']] = dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']].astype(float)
 
-  dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']] = dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']].astype('object')
+  dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']] = dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']].astype(object)
 
   dataset[['ApplicantIncome']] = dataset[['ApplicantIncome']].astype(int)
 
