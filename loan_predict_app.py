@@ -19,7 +19,7 @@ def home():
 def Main():
   return (render_template('index.html'))
 
-@app.route('/result',methods=['POST'])
+#@app.route('/result',methods=['POST'])
 
 @app.route("/Individual", methods=['GET', 'POST'])
 
@@ -89,5 +89,4 @@ def Individual():
   else:
     res = 'Loan Denied'  
 
-  return render_template('Individual.html',
-                               result=res)    
+  return render_template('Individual.html')    
