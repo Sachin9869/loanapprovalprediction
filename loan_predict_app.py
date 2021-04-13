@@ -92,5 +92,5 @@ def Individual():
   else:
     res = 'Loan Denied'  
 
-  return render_template('Individual.html',
+  return render_template('/Individual.html',
                          result = 'Y')    
