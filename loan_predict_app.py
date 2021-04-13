@@ -27,7 +27,7 @@ def Individual():
   if request.method == 'GET':
     return (render_template('Individual.html'))
 
-  loan_id=request.form['LoanId']
+  #loan_id=request.form['LoanId']
   gender=request.form['Gender']
   married = request.form['Married']
   dependents=request.form['Dependents']
@@ -43,7 +43,7 @@ def Individual():
   
   #  creating a json object to hold the data from the form
   input_data=[{
-  'loan_id':loan_id,
+  
   'gender':gender,
   'married':married,
   'dependents':dependents,
@@ -59,7 +59,7 @@ def Individual():
   dataset=pd.DataFrame(input_data)
 
   dataset=dataset.rename(columns={
-      'loan_id':'Loan_ID',
+      
       'gender': 'Gender',
       'married':'Married',
       'dependents':'Dependents',
@@ -74,7 +74,7 @@ def Individual():
   
   dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']] = dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']].astype(float)
 
-  dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']] = dataset[['Loan_ID', 'Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']].astype(object)
+  dataset[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']] = dataset[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']].astype(object)
 
   dataset[['ApplicantIncome']] = dataset[['ApplicantIncome']].astype(int)
 
