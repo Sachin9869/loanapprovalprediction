@@ -14,7 +14,6 @@ if __name__ == "__main__":
  app.run(debug=True)
 
 @app.route('/')
-
 def home():
   return render_template('index.html')
 
@@ -28,7 +27,8 @@ def Main():
 
 def Individual():
   if request.method == 'GET':
-    return (render_template('Individual.html'))
+    return (render_template('Individual.html',
+                            result = 'Y'))
 
   #loan_id=request.form['LoanId']
   gender=request.form['Gender']
