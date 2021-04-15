@@ -38,7 +38,7 @@ def Individual():
   app_income=request.form['AppIncome']
   coapp_income=request.form['CoAppIncome']
   loan_amt=request.form['LoanAmount']
-  loan_amount_term=request.form['LoanId']
+  loan_amount_term=request.form['LoanAmountTerm']
   credit_hist=request.form['CreditHistory']
   prop_area=request.form['PropertyArea'] 
   
