@@ -29,59 +29,9 @@ def Individual():
   if request.method == 'GET':
     return (render_template('Individual.html'))
 
-  #loan_id=request.form['LoanId']
-  gender=request.form['Gender']
-  married = request.form['Married']
-  dependents=request.form['Dependents']
-  education=request.form['Education']
-  self_employed=request.form['SelfEmployed']
-  app_income=request.form['AppIncome']
-  coapp_income=request.form['CoAppIncome']
-  loan_amt=request.form['LoanAmount']
-  loan_amount_term=request.form['LoanAmountTerm']
-  credit_hist=request.form['CreditHistory']
-  prop_area=request.form['PropertyArea'] 
-  
-  
-  #  creating a json object to hold the data from the form
-  input_data=[{
-  
-  'gender':gender,
-  'married':married,
-  'dependents':dependents,
-  'education':education,
-  'self_employed':self_employed,
-  'app_income':app_income,
-  'coapp_income':coapp_income,
-  'loan_amt':loan_amt,
-  'loan_amount_term':loan_amount_term,
-  'credit_hist':credit_hist,
-  'prop_area':prop_area}]
 
-  dataset=pd.DataFrame(input_data)
-
-  dataset=dataset.rename(columns={
-      
-      'gender': 'Gender',
-      'married':'Married',
-      'dependents':'Dependents',
-      'education':'Education',
-      'self_employed':'Self_Employed',
-      'app_income':'ApplicantIncome',
-      'coapp_income':'CoapplicantIncome',
-      'loan_amt':'LoanAmount',
-      'loan_amount_term':'Loan_Amount_Term',
-      'credit_hist':'Credit_History',
-      'prop_area':'Property_Area'})
-  
-  dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']] = dataset[['CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History']].astype(float)
-
-  dataset[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']] = dataset[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'Property_Area']].astype(object)
-
-  dataset[['ApplicantIncome']] = dataset[['ApplicantIncome']].astype(int)
-
-  dataset = dataset[['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed', 'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount', 'Loan_Amount_Term', 'Credit_History', 'Property_Area']]
-  
+  features = [float(i) for i in request.form.values()]
+  array_features = [np.array(features)]
   model = pickle.load(open('loan_predict.pkl', 'rb'))
 
   classifier=model.predict(dataset)
