@@ -27,8 +27,7 @@ def Main():
 
 def Individual():
   if request.method == 'GET':
-    return (render_template('Individual.html',
-                            result = 'Y'))
+    return (render_template('Individual.html'))
 
   #loan_id=request.form['LoanId']
   gender=request.form['Gender']
@@ -92,5 +91,5 @@ def Individual():
   else:
     res = 'Loan Denied'  
 
-  return render_template('/Individual.html',
+  return render_template('Predresult.html',
                          result = 'Y')    
