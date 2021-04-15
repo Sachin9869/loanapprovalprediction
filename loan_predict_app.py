@@ -11,7 +11,7 @@ from bokeh.embed import components
 app=Flask(__name__)
 
 if __name__ == "__main__":
- app.run(debug=True)
+ app.run()
 
 @app.route('/')
 def home():
@@ -91,9 +91,8 @@ def Individual():
   else:
     res = 'Loan Denied'  
 
-  return render_template('Predresult.html',
+  return render_template('Predresult',
                          result = res)
  
  if __name__ == '__main__':
-#Run the application
-    app.run()
+  app.run()
