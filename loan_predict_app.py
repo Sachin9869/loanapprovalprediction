@@ -91,8 +91,7 @@ def Individual():
   else:
     res = 'Loan Denied'  
 
-  return render_template('Predresult',
+  return render_template('Predresult.html',
                          result = res)
  
- if __name__ == '__main__':
-  app.run()
+
