@@ -36,7 +36,7 @@ def Individual():
 
   classifier=model.predict(dataset)
 
-  if classifier == 'Y':
+  if classifier == 1:
     res = 'Congratulations! Your loan is approved. Kindly connect with support team for paper work'
   else:
     res = 'Loan Denied'  
